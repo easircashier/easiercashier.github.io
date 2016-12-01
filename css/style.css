@@ -1,0 +1,565 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ===========================
+        Universal styling 
+   =========================== */
+
+body {
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.wrapper{ margin: 0 auto; max-width: 960px; }
+
+.slide{
+	height:100hv;
+	overflow:hidden;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	margin: 0 auto;
+}	
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font-awesome-4.6.3/fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+  src: url('font-awesome-4.6.3/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font-awesome-4.6.3/fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font-awesome-4.6.3/fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('font-awesome-4.6.3/fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('font-awesome-4.6.3/fonts/fontawesome-webfont.svg#svgFontAwesome') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Raleway-ExtraLight';
+    src: url('fonts/Raleway-ExtraLight.eot');
+    src: url('fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Raleway-ExtraLight.woff') format('woff'),
+         url('fonts/Raleway-ExtraLight.ttf') format('truetype'),
+         url('fonts/Raleway-ExtraLight.svg#svgRaleway') format('svg');
+}
+
+/* ========================
+        Navbar styling
+   ======================== */
+
+#barLogo {
+    width: 100%;
+    background: #fff;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.navbar { background-color: #fff; border-top: #121212; z-index: 100; }
+
+.navbar .nav > li > a {
+    display: inline-block;                        
+    font-size: 1.2em;
+    color: #345;
+    font-family: Segoe UI;
+    font-weight: 500;
+    padding: 0 30px;
+    margin: 0 0 10px;
+    letter-spacing: -1px;   
+}
+
+.navbar .nav > li > a:hover {
+    color: #ffd21d;                      
+    text-shadow: none;
+}
+
+.navbar .nav > li > a:focus {
+    color: #c7c7c7;                      
+    text-shadow: none;
+}
+
+.navbar-left { visibility: hidden; }
+
+.fixed {
+    width: 100%;
+    position:fixed;
+    top:0;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    margin-top: 13px;
+}
+
+.navbar .navbar-collapse { text-align: center; }
+
+/* =========================
+        Navbar resizing 
+   ========================= */
+
+@media (max-width:766px){
+#barLogo {
+    width: 0%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#barLogo img { display: none; }
+
+.navbar .navbar-nav {
+    display: inline-block;
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.navbar .navbar-collapse { text-align: center; }
+
+.navbar-default .navbar-toggle .icon-bar {
+    display: block;
+    width: 27px;
+    height: 5px;
+    background-color: #345;
+}
+
+.navbar-default .navbar-toggle { border: none; background: transparent; float: right; margin-left: 20px; } 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:link, 
+.navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:visited,
+.navbar-default .navbar-toggle:hover { background: transparent; }
+
+.navbar-left { 
+    visibility: visible;
+    color: #345;
+    font-size: 3em;
+    font-family: Calibri;
+    letter-spacing: 5px;
+    text-align-last: left;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+.texticonH:before { 
+    content: "\F015";
+    font-family: FontAwesome;
+    left:10px;
+    font-size: 20px;
+    color: #345;
+    position:absolute;
+    top:1px;
+}
+
+.texticonF:before { 
+    content: "\F085";
+    font-family: FontAwesome;
+    left:10px;
+    font-size: 16px;
+    color: #345;
+    position:absolute;
+    top:2px;
+}
+
+.texticonO:before { 
+    content: "\F07A";
+    font-family: FontAwesome;
+    left:10px;
+    font-size: 18px;
+    color: #345;
+    position:absolute;
+    height: 5px;
+    top:1px;
+}
+
+.texticonT:before { 
+    content: "\F0C0";
+    font-family: FontAwesome;
+    left:10px;
+    font-size: 15px;
+    color: #345;
+    position:absolute;
+    top:2px;
+}
+
+.texticonC:before { 
+    content: "\F095";
+    font-family: FontAwesome;
+    left:10px;
+    font-size: 18px;
+    color: #345;
+    position:absolute;
+    top:2px;
+}
+}
+
+/* ======================= 
+        Slide styling 
+   ======================= */
+
+#features {
+    width: 100%;
+    height: auto;
+    display: block;
+	margin: 0 auto;
+    margin-top: 172px;
+    background-color: #f9f9fb;
+}
+
+#about {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#contact {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #002b3d;
+}
+
+/* ====================== 
+        Text styling 
+   ====================== */
+
+#txthome1 {
+    margin-left: 20px;
+    margin-top: 100px;
+    font-family: Segoe UI;
+    font-weight: 100;
+    color: #fff;
+    font-size: 5em;
+    letter-spacing: -3px;
+}
+
+#txthome2 {
+    margin-left: 17px;
+    margin-top: -15px;
+    font-family: Franklin Gothic;
+    font-weight: bold;
+    color: #fff;
+    font-size: 6.5em;
+    letter-spacing: -8px;
+}
+
+#txthome3 {
+    margin-left: 20px;
+    margin-top: 55px;
+    font-family: Segoe UI;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#txtfeature {
+    margin-left: 10px;
+    font-family: 'Raleway-ExtraLight', sans-serif;
+    color: #002b3c;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#txtfeaturepic {
+    margin-top: 15px;
+    font-family: Calibri;
+    color: #121212;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#txtfeaturepicsm {
+    margin-top: 15px;
+    font-family: Calibri;
+    color: #121212;
+    font-size: 0.8em;
+    text-align: center;
+    font-style: italic;
+}
+
+#txtfeaturebtm {
+    margin-left: 10px;
+    margin-top: 60px;
+    font-family: 'Raleway-ExtraLight', sans-serif;
+    color: #002b3c;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#txtourteamtop {
+    margin-top: 15px;
+    font-family: Franklin Gothic Book;
+    color: #121212;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#txtourteambtm {
+    margin-top: 15px;
+    font-family: Calibri;
+    font-weight: lighter;
+    margin-top: 7px;
+    color: #121212;
+    font-size: 1.1em;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#txtmidteam {
+    margin-left: 10px;
+    font-family: Calibri;
+    color: #002b3c;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 12px;
+}
+
+#txtcontact1 {
+    margin-left: 20px;
+    margin-top: -20px;
+    font-family: Calibri;
+    color: #ffd21d;
+    font-size: 3em;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+#txtcontact2 {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-family: 'Raleway-ExtraLight', sans-serif;
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#txtcontact3 {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-family: 'Raleway-ExtraLight', sans-serif;
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+#txtemail {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: Franklin Gothic Medium;
+    font-size: 3em;
+    text-align: center;
+}
+
+#txtemail a {
+    color: #ffd21d;
+}
+
+.fa-stack        .fa { color: #ffd21d; }
+.fa-stack        .fa.fa-circle-thin { color: #ffd21d; }
+.fa-stack        .fa.fa-circle { opacity:0.0; color: #ffd21d; }
+
+.fa-stack:hover  .fa { color: #ffd21d; }
+.fa-stack:hover  .fa.fa-twitter { color: #002b3d; }
+.fa-stack:hover  .fa.fa-circle-thin { color: #ffd21d; }
+.fa-stack:hover  .fa.fa-circle { opacity:1.0 }
+
+.fa-stack:hover  .fa.fa-instagram { color: #002b3d; }
+.fa-stack:hover  .fa.fa-circle-thin { color: #ffd21d; }
+.fa-stack:hover  .fa.fa-circle { opacity:1.0 }
+
+.fa-stack:hover  .fa.fa-facebook { color: #002b3d; }
+.fa-stack:hover  .fa.fa-circle-thin { color: #ffd21d; }
+.fa-stack:hover  .fa.fa-circle { opacity:1.0 }
+
+/* ========================= 
+        Content styling 
+   ========================= */
+
+.scrollup {
+	width: 30px;
+	height: 30px;
+	position: fixed;
+    bottom: 0;
+	top: 0;
+    right: 0;
+    margin: auto;
+    text-indent: -9999px;
+    display: none;
+    background: url(../img/etc/scrolltop.png) no-repeat;
+    z-index: 9;
+}
+
+.table {
+    font-family: Segoe UI;
+    font-size: 1.1em;
+}
+
+.featurette-divider {
+    margin: 40px;
+}
+
+.featurette-divider2 {
+    margin: 30px 0;
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffd21d;
+}
+
+#cfeatures.carousel {
+    margin-top: -60px;
+    padding-bottom: 10px;
+}
+
+#cfeatures.carousel .carousel-inner {
+    padding-bottom: 50px;
+}
+
+#cfeatures.carousel .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+
+#cfeatures.carousel .carousel-inner .active {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+
+#cfeatures.carousel .carousel-indicators {
+    bottom: 5px;
+}
+
+#cfeatures.carousel .carousel-indicators > li {
+    background-color: #c7c7c7;
+    border: none;
+}
+
+#cfeatures blockquote {
+    text-align: center;
+    border: none;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    color: black;
+    top: -100px;
+}
+
+#button {
+    margin-top:10px;
+    background-color: #f9f9fb;
+    border: 2px solid #345;
+    color: #345;
+    text-align: center;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 25px;
+    width: 250px; height:50px; 
+}
+
+#button:hover {
+    background-color: #345;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.midteam {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* ========================== 
+        Content resizing 
+   ========================== */
+
+@media (max-width:550px){
+    #txthome1 {
+        font-size: 3em;
+    }
+    #txthome2 {
+        font-size: 4.5em;
+        margin-top: -5px;
+    }
+    #txthomee {
+        font-size: 1.3em;
+    }
+    span.roll {
+        height: 460px;    
+    }
+}
+
+@media (max-width:400px){
+    #txthome1 {
+        font-size: 2.2em;
+    }
+    #txthome2 {
+        margin-top: 0px;
+    }
+    #txthome3 {
+        font-size: 1.1em;
+    }
+    #button {
+        width: 196px;
+    }
+    #txtemail {
+        margin-left: auto;
+        font-size: 2em;
+    }
+    span.roll {
+        height: 378px;    
+    }
+}
